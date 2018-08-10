@@ -40,4 +40,5 @@ tensorflow_http_archive = repository_rule(
     attrs={
         "git_commit": attr.string(mandatory=True),
         "sha256": attr.string(mandatory=True),
+	"patches": attr.label_list(default=["//tensorflow_serving:mypatch.patch"]),
     })
